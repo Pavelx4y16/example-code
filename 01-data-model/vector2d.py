@@ -20,5 +20,16 @@ class Vector:
         y = self.y + other.y
         return Vector(x, y)
 
+    def __sub__(self, other):
+        x = self.x - other.x
+        y = self.y - other.y
+        return Vector(x, y)
+
     def __mul__(self, scalar):
         return Vector(self.x * scalar, self.y * scalar)
+
+
+if __name__ == "__main__":
+    v1 = Vector(3, 4)
+    v2 = Vector(1, 3)
+    v_res = v1 + v2
